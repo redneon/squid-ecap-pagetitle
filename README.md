@@ -134,6 +134,18 @@ adaptation_access eReqmod allow all
 ```
 
 
+
+### LOGS
+
+How to read lines in log:
+
+```timestamp client_ip username domain "page_title" url "content_type" custom_meta```
+
+Example:
+
+```1465966583.025 192.168.111.100 - www.google.ru "Google" https://www.google.ru/ "text/html; charset=UTF-8" referer https://www.google.ru/ "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36" 0b:0a:22:13:53:13```
+
+
 ### LOGROTATE
 
 
