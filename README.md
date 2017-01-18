@@ -130,7 +130,8 @@ adaptation_access eRespmod allow http_status_ok
 ## eReqmod is needed for changing of header "Accept-Encoding". This will be keep only: gzip, deflate, identity values.
 ## You can to remove lines below, but for example, google.com uses "sdch" compression, which the adapter does not know.
 ecap_service eReqmod reqmod_precache bypass=on uri=ecap://example.com/ecap_pagetitle logfile=/var/log/squid3/page_titles.log
-adaptation_access eReqmod allow all
+acl is_web_proto proto HTTP HTTPS
+adaptation_access eReqmod allow is_web_proto
 ```
 
 
